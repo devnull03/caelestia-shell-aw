@@ -22,6 +22,7 @@
   aubio,
   libcava,
   fftw,
+  ffmpeg,
   pipewire,
   xkeyboard-config,
   cmake,
@@ -35,7 +36,10 @@
 }: let
   version = "1.0.0";
 
-  qs = quickshell.withModules [qt6.qtimageformats];
+  qs = quickshell.withModules [
+    qt6.qtimageformats
+    qt6.qtmultimedia
+  ];
 
   runtimeDeps =
     [
@@ -49,6 +53,8 @@
       libqalculate
       bash
       hyprland
+      qt6.qtmultimedia
+      ffmpeg
     ]
     ++ extraRuntimeDeps
     ++ lib.optional withCli caelestia-cli;
