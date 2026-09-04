@@ -5,6 +5,9 @@
 </div>
 <br>
 
+> [!NOTE]
+> **Nix-maintained fork.** This copy is packaged for declarative NixOS/Home Manager use alongside the [companion CLI fork](https://github.com/devnull03/caelestia-cli-aw). It avoids the upstream imperative patcher workflow.
+
 This repository is a customized fork of the original [caelestia-shell](https://github.com/caelestia-dots/shell) that natively implements full animated video wallpaper support along with several UI and QoL enhancements for managing your backgrounds.
 
 ## ✨ Features Added in this Fork
