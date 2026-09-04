@@ -24,7 +24,7 @@ Searcher {
     property bool previewColourLock
     property bool pendingPreviewClear
 
-    readonly property list<string> validVideoExtensions: ["mp4", "webm", "mkv"]
+    readonly property list<string> validVideoExtensions: ["mp4", "webm", "mkv", "gif"]
     property string wallpaperMode: "static"
     property string cacheBuster: ""
     property string rollbackPath: ""
@@ -294,7 +294,7 @@ Searcher {
         recursive: true
         path: Paths.wallsdir
         filter: FileSystemModel.Files
-        nameFilters: ["*.jpg", "*.jpeg", "*.png", "*.webp", "*.tif", "*.tiff", "*.svg", "*.gif"]
+        nameFilters: ["*.jpg", "*.jpeg", "*.png", "*.webp", "*.tif", "*.tiff", "*.svg"]
     }
 
     FileSystemModel {
@@ -303,7 +303,7 @@ Searcher {
         recursive: true
         path: Paths.wallsdir + "/Animated"
         filter: FileSystemModel.Files
-        nameFilters: ["*.mp4", "*.webm", "*.mkv"]
+        nameFilters: ["*.mp4", "*.webm", "*.mkv", "*.gif"]
     }
 
     Process {
