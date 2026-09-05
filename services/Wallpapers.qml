@@ -103,6 +103,12 @@ Searcher {
         wallpaperMode = mode;
     }
 
+    function updateWallpapers() {
+        staticWallpapers.reload();
+        animatedWallpapers.reload();
+        cacheBuster = Date.now().toString();
+    }
+
     function captureRollbackState() {
         if (!isTrackingRollback) {
             rollbackPath = actualCurrent;
@@ -301,7 +307,7 @@ Searcher {
         id: animatedWallpapers
         watchChanges: true
         recursive: true
-        path: Paths.wallsdir + "/Animated"
+        path: Paths.wallsdir
         filter: FileSystemModel.Files
         nameFilters: ["*.mp4", "*.webm", "*.mkv", "*.gif"]
     }
